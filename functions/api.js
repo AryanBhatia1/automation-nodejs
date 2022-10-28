@@ -1,6 +1,7 @@
 const express = require("express");
 const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
+const ejs = require("ejs");
 const webdriver = require("selenium-webdriver");
 const chrome = require("chromedriver");
 
