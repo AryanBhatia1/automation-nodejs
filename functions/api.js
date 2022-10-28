@@ -1,18 +1,19 @@
 const express = require("express");
 const serverless = require("serverless-http");
 const bodyParser = require("body-parser");
-const ejs = require("ejs");
 const webdriver = require("selenium-webdriver");
 const chrome = require("chromedriver");
+const ejs = require("ejs");
 
 const app = express();
 const router = express.Router();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.set("views", "../views");
 app.set("view engine", "ejs");
 
 router.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index");
 });
 
 var url;
