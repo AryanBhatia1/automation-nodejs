@@ -25,16 +25,13 @@ router.post("/", (req, res) => {
     newString +
     "&language=en&email=" +
     clientName;
-    let driver = new webdriver.Builder()
-    .forBrowser("chrome")
-    .build();
-  
+  let driver = new webdriver.Builder().forBrowser("chrome").build();
+
   driver.get(url);
   driver.executeScript(
     "document.querySelector('.report-abuse-container').style.display = 'none';"
   );
   driver.sleep(10000000);
-
 });
 
 app.use("/", router);
