@@ -13,7 +13,7 @@ app.use(express.static("public"));
 // app.set("view engine", "ejs");
 
 router.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.ejs");
+  res.sendFile("./index.ejs");
   // res.render(__dirname + "/index");
 });
 
