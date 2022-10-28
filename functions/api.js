@@ -9,11 +9,12 @@ const app = express();
 const router = express.Router();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.set("views", "/views");
+// app.set("views", "../views");
 app.set("view engine", "ejs");
 
 router.get("/", (req, res) => {
-  res.render("index");
+  // res.sendFile(__dirname + "/signup.html");
+  res.render(__dirname + "/index");
 });
 
 var url;
